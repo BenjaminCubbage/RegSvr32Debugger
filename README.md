@@ -4,7 +4,7 @@ Mimic regsvr32.exe to print out all of a COM-enabled DLL or OCX file's attempts 
 
 ### Introduction
 
-This was a fun little project I made while experimenting with creating my own COM Classes in C++. COM Objects are essentially small pieces of data that contain VTable pointers and, optionally, private fields. The COM PI is designed to be language- and location-agnostic, so that a COM object can be created and utilized no matter the target architecture or runtime. 
+This was a fun little project I made while experimenting with creating my own COM Classes in C++. COM Objects are essentially small pieces of data that contain VTable pointers and, optionally, private fields. The COM API is designed to be language- and location-agnostic, so that a COM object can be created and utilized no matter the target architecture or runtime. 
 
 The idea is that these COM Classes can be loaded from anywhere by looking up their location in the Windows Registry. The DLL/OCX files are registered in the Windows System Registry using [regsvr32](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/regsvr32). All regsvr32 does to register a PE—as far as I can tell, at least—is call into the DllRegisterServer entrypoint and print the status code result.
 
